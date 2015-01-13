@@ -482,7 +482,7 @@ handle_open (unsigned char *argbuf, size_t arglen)
 
   err = pcsc_connect (pcsc_context,
                       current_rdrname,
-                      PCSC_SHARE_EXCLUSIVE,
+                      PCSC_SHARE_SHARED,
                       PCSC_PROTOCOL_T0|PCSC_PROTOCOL_T1,
                       &pcsc_card,
                       &pcsc_protocol);
@@ -673,7 +673,7 @@ handle_reset (unsigned char *argbuf, size_t arglen)
 
   err = pcsc_connect (pcsc_context,
                       current_rdrname,
-                      PCSC_SHARE_EXCLUSIVE,
+                      PCSC_SHARE_SHARED,
                       PCSC_PROTOCOL_T0|PCSC_PROTOCOL_T1,
                       &pcsc_card,
                       &pcsc_protocol);
